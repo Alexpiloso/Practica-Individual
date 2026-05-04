@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+.separador {
+    border: none;
+    border-top: 1px solid #64748b;
+    width: 80%;
+    margin: 15px auto;
+}

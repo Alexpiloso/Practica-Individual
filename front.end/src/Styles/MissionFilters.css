@@ -1,0 +1,86 @@
+.filtros-resumen {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filtros,
+.resumen {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filtros button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 6px 12px;
+    background: #1e293b;
+    color: #fff;
+}
+
+.filtros button:hover {
+    background: #22c55e;
+    color: #000;
+}
+
+.card-resumen {
+    background: #1e293b;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.card-resumen h4 {
+    font-size: 14px;
+}
+
+.card-resumen span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media (min-width: 1024px) {
+    .card-resumen {
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .filtros-resumen {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filtros,
+    .resumen {
+        flex-wrap: nowrap;
+    }
+
+    .resumen {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .card-resumen {
+        flex: 1;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .filtros {
+        flex-direction: column;
+    }
+
+    .filtros button {
+        width: 100%;
+    }
+
+    .card-resumen {
+        padding: 8px;
+    }
+}

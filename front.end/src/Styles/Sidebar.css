@@ -1,0 +1,191 @@
+.sidebar {
+  width: 220px;
+  background: #020617;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo-box,
+.frase {
+  text-align: center;
+}
+
+.logo-box {
+  margin-bottom: 20px;
+}
+
+.logo-box h2 {
+  color: #22c55e;
+}
+
+.logo-box i {
+  color: #fff;
+}
+
+.menu,
+.submenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu {
+  gap: 10px;
+}
+
+.submenu {
+  gap: 8px;
+  margin: 8px 0 0 14px;
+}
+
+.menu a,
+.submenu a,
+.menu-desplegable summary {
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.menu a,
+.menu-desplegable summary {
+  padding: 10px;
+}
+
+.submenu a {
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.menu a,
+.submenu a {
+  color: #cbd5f5;
+}
+
+.menu a:hover,
+.submenu a:hover {
+  background: #1e293b;
+  color: #22c55e;
+}
+
+.activo,
+.menu-desplegable summary {
+  background: #22c55e;
+  color: #000;
+  font-weight: bold;
+}
+
+.activo {
+  color: #000 !important;
+}
+
+.menu-desplegable summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.frase {
+  font-size: 13px;
+  color: #64748b;
+}
+
+@media (max-width: 1023px) {
+
+  .logo-box,
+  .frase {
+    display: none;
+  }
+
+  .menu {
+    gap: 0;
+  }
+
+  .menu-desplegable {
+    position: relative;
+  }
+
+  .menu-desplegable summary {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+    background: #22c55e;
+    color: #000;
+    border-radius: 8px;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .menu-desplegable summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .menu-desplegable summary i {
+    font-size: 18px;
+    margin: 0;
+    color: #000;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .sidebar {
+    width: auto;
+    background: transparent;
+    padding: 0;
+    position: fixed;
+    top: 32px;
+    left: 20px;
+    z-index: 1000;
+    display: block;
+  }
+
+  .submenu {
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 200px;
+    margin: 0;
+    padding: 10px;
+    background: #020617;
+    border-radius: 10px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+  }
+
+  .submenu a {
+    background: #1e293b;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    width: auto;
+    background: transparent;
+    padding: 0;
+    position: fixed;
+    top: 26px;
+    left: 15px;
+    z-index: 1000;
+    display: block;
+  }
+
+  .submenu {
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 180px;
+    margin: 0;
+    padding: 10px;
+    background: #020617;
+    border-radius: 10px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+  }
+
+  .submenu a {
+    background: #1e293b;
+    border-radius: 6px;
+  }
+}

@@ -1,0 +1,56 @@
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.encabezado h1 {
+    color: #22c55e;
+}
+
+.perfil {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #22c55e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.perfil i {
+    color: #fff;
+}
+
+@media (max-width: 1023px) {
+    .encabezado {
+        position: relative;
+        min-height: 40px;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0;
+        margin-bottom: 16px;
+    }
+
+    .encabezado>div:first-child {
+        width: 100%;
+        text-align: center;
+    }
+
+    .encabezado>div:first-child p {
+        display: none;
+    }
+
+    .encabezado h1 {
+        text-align: center;
+        margin: 0;
+    }
+
+    .perfil {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

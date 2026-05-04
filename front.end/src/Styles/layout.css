@@ -1,0 +1,49 @@
+.contenedor {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #111827;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.principal {
+    flex: 1;
+    padding: 20px;
+}
+
+.bloque {
+    background: #020617;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.footer {
+    text-align: center;
+    color: #64748b;
+    font-size: 12px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .contenedor {
+        margin: 15px;
+    }
+
+    .principal {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .contenedor {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .principal {
+        width: 100%;
+        padding: 15px;
+    }
+}

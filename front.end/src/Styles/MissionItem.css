@@ -1,0 +1,143 @@
+.item-mision {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e293b;
+    padding: 10px;
+    border-radius: 6px;
+    gap: 12px;
+    transition: 0.3s;
+}
+
+.item-mision.completado {
+    background: #14532d;
+}
+
+.item-mision.rehecha {
+    background: #395ab4;
+}
+
+.item-mision.eliminando {
+    background: #7f1d1d;
+}
+
+.estado-circulo {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #9ca3af;
+    border-radius: 50%;
+}
+
+.item-mision.completado .estado-circulo {
+    border-color: #22c55e;
+    background: #22c55e;
+}
+
+.item-mision.rehecha .estado-circulo {
+    border-color: #1e3a8a;
+    background: #1e3a8a;
+}
+
+.item-mision.eliminando .estado-circulo {
+    border-color: #dc2626;
+    background: #dc2626;
+}
+
+.info-tarea {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-tarea h4,
+.item-mision p,
+.fecha-tarea {
+    margin: 0;
+}
+
+.info-tarea h4 {
+    font-size: 15px;
+}
+
+.etiqueta {
+    display: inline-block;
+    width: fit-content;
+    padding: 2px 8px;
+    border-radius: 4px;
+    align-self: flex-start;
+    font-size: 12px;
+}
+
+.etiqueta.alta {
+    background: #22c55e;
+    color: #000;
+}
+
+.etiqueta.media {
+    background: #facc15;
+    color: #000;
+}
+
+.etiqueta.baja {
+    background: #ef4444;
+    color: #fff;
+}
+
+.lado-derecho {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.fecha-tarea {
+    color: #cbd5f5;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+}
+
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.acciones button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 8px;
+    color: #fff;
+}
+
+.btn-visto {
+    background: #22c55e;
+}
+
+.btn-rehacer {
+    background: #3b82f6;
+}
+
+.btn-eliminar {
+    background: #ef4444;
+}
+
+@media (max-width: 767px) {
+    .item-mision {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .lado-derecho,
+    .acciones {
+        width: auto;
+    }
+
+    .lado-derecho {
+        margin-left: auto;
+    }
+}

@@ -1,0 +1,56 @@
+.formulario {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.campo {
+    flex: 1;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    background: #1e293b;
+    color: #fff;
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px 15px;
+    background: #22c55e;
+    height: 33px;
+}
+
+.btn:hover {
+    background: #16a34a;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .formulario .campo {
+        width: calc(50% - 5px);
+        flex: none;
+    }
+
+    .formulario .campo:first-child,
+    .formulario .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .formulario {
+        flex-direction: column;
+    }
+
+    .campo,
+    .btn {
+        width: 100%;
+    }
+}
